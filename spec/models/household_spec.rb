@@ -25,6 +25,17 @@ RSpec.describe Household, type: :model do
 
       expect(household.user).to eq(user)
     end
+
+    it 'has many members' do
+      user = create(:user)
+      household = build(:household, user: user)
+
+      member1 = create(:member, household: household)
+      member2 = create(:member, household: household)
+
+      expect(household.members.size).to eq(2)
+    end
+    
   end
   
   
