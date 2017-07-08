@@ -29,8 +29,10 @@ RSpec.describe Member, type: :model do
   end
 
   describe 'relationships' do
-    it 'belongs to a household'
+    it 'belongs to a household' do
+      member = build(:member, household: @household)
+
+      expect(member.household).to eq(@household)
+    end
   end
-  
-  
 end
