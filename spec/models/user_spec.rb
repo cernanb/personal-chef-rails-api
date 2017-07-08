@@ -58,7 +58,14 @@ RSpec.describe User, type: :model do
 
     end
     
-    it 'has many members through households'
+    it 'has many members through households' do
+      user = create(:user)
+      household =  create(:household, user: user)
+      member1 = create(:member, household: household)
+      member2 = create(:member, household: household)
+      expect(user.members.size).to eq(2)
+    end
+    
     it 'has many meals'
   end
   

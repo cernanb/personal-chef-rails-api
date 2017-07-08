@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
   has_many :households
+  has_many :members, through: :households
 
   has_secure_password
 end
