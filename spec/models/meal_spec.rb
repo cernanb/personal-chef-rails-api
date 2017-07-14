@@ -12,4 +12,18 @@ RSpec.describe Meal, type: :model do
     end
     
   end
+
+  describe 'relationships' do
+    it 'has many user_meals' do
+      cernan = create(:user)
+      meal = create(:meal)
+
+      meal.user_meals.create(user: cernan)
+
+      expect(meal.user_meals.size).to eq(1)
+    end
+    
+    it 'has many users, through user_meals'
+  end
+  
 end
