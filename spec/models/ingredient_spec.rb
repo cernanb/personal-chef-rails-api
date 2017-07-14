@@ -23,7 +23,16 @@ RSpec.describe Ingredient, type: :model do
       expect(ing.meal_ingredients.size).to eq(1)
     end
     
-    it 'has many meals, through meal_ingredients'
+    it 'has many meals, through meal_ingredients' do
+      ing = create(:ingredient)
+      meal = create(:meal)
+
+      ing.meal_ingredients.create(meal: meal)
+
+      expect(ing.meals.size).to eq(1)
+
+    end
+    
   end
   
 end
