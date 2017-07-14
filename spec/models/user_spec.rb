@@ -54,8 +54,9 @@ RSpec.describe User, type: :model do
 
       household = create(:household, user: user)
 
-      # user.households << household
+      user.households << household
 
+      expect(user.households.size).to eq(1)
     end
     
     it 'has many members through households' do
@@ -66,7 +67,19 @@ RSpec.describe User, type: :model do
       expect(user.members.size).to eq(2)
     end
     
-    it 'has many meals'
+    it 'has many user meals' do
+      cernan = create(:user)
+      meal = create(:meal)
+
+      cernan.user_meals.create(meal: meal)
+
+      expect(cernan.user_meals.size).to eq(1)
+    end
+
+    xit 'has many meals, through user meals' do
+
+    end
+    
   end
   
 end
