@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :households
   has_many :members, through: :households
+  has_many :user_meals
 
   has_secure_password
 end
