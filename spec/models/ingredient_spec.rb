@@ -27,10 +27,9 @@ RSpec.describe Ingredient, type: :model do
       ing = create(:ingredient)
       meal = create(:meal)
 
-      ing.meal_ingredients.create(meal: meal)
+      ing.meal_ingredients.create(meal: meal, measurement: "1 cup")
 
       expect(ing.meals.size).to eq(1)
-
     end
     
   end
