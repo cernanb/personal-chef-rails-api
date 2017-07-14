@@ -76,8 +76,13 @@ RSpec.describe User, type: :model do
       expect(cernan.user_meals.size).to eq(1)
     end
 
-    xit 'has many meals, through user meals' do
+    it 'has many meals, through user meals' do
+      cernan = create(:user)
+      meal = create(:meal)
 
+      cernan.user_meals.create(meal: meal)
+
+      expect(cernan.meals.size).to eq(1)
     end
     
   end
