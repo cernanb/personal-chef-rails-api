@@ -12,4 +12,9 @@ class User < ApplicationRecord
   has_many :meals, through: :user_meals
 
   has_secure_password
+
+  def leads
+    households.where(client?: false)
+  end
+  
 end

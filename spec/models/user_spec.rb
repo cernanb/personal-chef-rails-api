@@ -47,9 +47,26 @@ RSpec.describe User, type: :model do
       expect(user.password_digest).to_not eq(user.password)
     end
   end
+
+  describe 'scope methods' do
+    it 'has many household leads' do
+       user = build(:user)
+
+      household1 = create(:household, user: user)
+      household2 = create(:household, user: user, client?: true)
+
+      user.households << household1
+      user.households << household2
+
+      expect(user.leads.size).to eq(1)
+    end
+    
+    it 'has many household clients'
+  end
+  
   
   describe 'relationships' do
-    it 'has many households' do
+    it 'has many household leads' do
       user = build(:user)
 
       household = create(:household, user: user)
