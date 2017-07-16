@@ -50,7 +50,7 @@ RSpec.describe User, type: :model do
 
   describe 'scope methods' do
     it 'has many household leads' do
-       user = build(:user)
+      user = build(:user)
 
       household1 = create(:household, user: user)
       household2 = create(:household, user: user, client?: true)
@@ -61,7 +61,18 @@ RSpec.describe User, type: :model do
       expect(user.leads.size).to eq(1)
     end
     
-    it 'has many household clients'
+    it 'has many household clients' do
+      user = build(:user)
+
+      household1 = create(:household, user: user)
+      household2 = create(:household, user: user, client?: true)
+
+      user.households << household1
+      user.households << household2
+
+      expect(user.clients.size).to eq(1)
+    end
+    
   end
   
   

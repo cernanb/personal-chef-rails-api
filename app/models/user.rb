@@ -16,5 +16,9 @@ class User < ApplicationRecord
   def leads
     households.where(client?: false)
   end
+
+  def clients
+    households.where(client?: true)
+  end
   
 end
