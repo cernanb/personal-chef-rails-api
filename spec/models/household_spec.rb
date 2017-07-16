@@ -2,6 +2,26 @@ require 'rails_helper'
 
 RSpec.describe Household, type: :model do
 
+  it "has a default value of false for client?" do
+    household = build(:household)
+
+    expect(household.client?).to eq(false)
+  end
+
+  describe 'instance methods' do
+
+    describe 'convert_to_client' do
+      it 'converts a household to a client' do
+        household = create(:household)
+
+        household.convert_to_client
+        expect(household.client?).to eq(true)
+      end
+      
+    end
+    
+  end
+
   describe 'validations' do
     it 'requires a name' do
       household = build(:household, name: nil)

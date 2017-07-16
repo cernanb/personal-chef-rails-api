@@ -4,4 +4,9 @@ class Household < ApplicationRecord
 
   belongs_to :user
   has_many :members
+
+  def convert_to_client
+    update(client?: true)
+  end
+  
 end
