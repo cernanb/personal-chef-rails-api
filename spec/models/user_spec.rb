@@ -77,15 +77,6 @@ RSpec.describe User, type: :model do
   
   
   describe 'relationships' do
-    it 'has many household leads' do
-      user = build(:user)
-
-      household = create(:household, user: user)
-
-      user.households << household
-
-      expect(user.households.size).to eq(1)
-    end
     
     it 'has many members through households' do
       user = create(:user)
