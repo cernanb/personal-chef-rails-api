@@ -6,4 +6,10 @@ class HouseholdsController < ApplicationController
     render json: @households
   end
 
+  def show
+    household = Household.find(params[:id])
+
+    render json: household
+  end
+
 end
