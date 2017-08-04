@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HouseholdsController, type: :controller do
+RSpec.describe Api::V1::HouseholdsController, type: :controller do
 
   before(:each) do
     @user = create(:user)
