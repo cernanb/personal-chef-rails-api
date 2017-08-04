@@ -47,7 +47,7 @@ RSpec.describe "API::V1::UsersController", type: :request do
         )
       end
 
-      xit "unable to find user with email" do
+      it "unable to find user with email" do
         params = {
           user: {
             email: "cernan@thepub.com",
@@ -62,8 +62,7 @@ RSpec.describe "API::V1::UsersController", type: :request do
         body = JSON.parse(response.body)
 
         expect(response.status).to eq(500)
-        expect(body["errors"]).to include()
-        binding.pry
+        expect(body["errors"]).to include("Unable to find a user with the provided email")
       end
     end
   end
