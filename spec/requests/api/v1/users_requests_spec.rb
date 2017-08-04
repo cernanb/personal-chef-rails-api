@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "API::V1::Users", type: :request do
+RSpec.describe "API::V1::UsersController", type: :request do
 
   describe "POST /users" do
 
@@ -9,6 +9,8 @@ RSpec.describe "API::V1::Users", type: :request do
       before(:each) do
         params = {
           user: {
+            first_name: "Cernan",
+            last_name: "Bernardo",
             email: "cernan@flatironschool.com",
             password: "password"
           }
