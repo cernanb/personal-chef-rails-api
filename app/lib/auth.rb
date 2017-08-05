@@ -5,5 +5,7 @@ class Auth
     JWT.encode(payload, ENV['AUTH_SECRET'], ENV['AUTH_ALGO'])
   end
 
-  
+  def self.decode_token(token)
+    JWT.decode(token, ENV['AUTH_SECRET'], true, { algorithm: ENV['AUTH_ALGO'] })
+  end
 end
