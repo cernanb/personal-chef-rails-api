@@ -1,4 +1,5 @@
 class Api::V1::AuthController < ApplicationController
+  before_action :authenticate_token!, only: [:refresh]
 
   def login
     @user = User.find_by(email: params[:email])
@@ -9,13 +10,17 @@ class Api::V1::AuthController < ApplicationController
       }, status: 500
 
     elsif @user && @user.authenticate(params[:password])
-      render "users/users_with_token.json.jbuilder"
+      render "users/users_with_token.json.jbuilder", user: @user
 
     else
       render json: {
         errors: ["Password is incorrect"]        
       }, status: 500
     end
+  end
+
+  def refresh
+    render "users/users_with_token.json.jbuilder", user: current_user
   end
 
 end
