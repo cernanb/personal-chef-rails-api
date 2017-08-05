@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :households, only: [:index, :show]
       resources :users, only: [:create]
       post '/auth', to: 'auth#login'
+      post '/auth/refresh', to: 'auth#refresh'
 
     end
   end
