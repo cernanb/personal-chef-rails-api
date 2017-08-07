@@ -1,8 +1,8 @@
 class Api::V1::HouseholdsController < ApplicationController
+  before_action :authenticate_token!, only: [:index]
 
   def index
-    @households = Household.all
-    # @households = current_user.households
+    @households = current_user.households
     render json: @households
   end
 
