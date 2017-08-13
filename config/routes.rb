@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :households, only: [:index, :show, :create]
       resources :users, only: [:create]
+      resources :meals, only: [:create, :index]
       post '/auth', to: 'auth#login'
       post '/auth/refresh', to: 'auth#refresh'
 
