@@ -9,7 +9,7 @@ RSpec.describe Api::V1::HouseholdsController, type: :controller do
 
   describe 'GET index' do
 
-    it "returns all households that belong to the user" do
+    xit "returns all households that belong to the user" do
       household1 = create(:household, user: @user)
       user2 = User.create(first_name: "Ashley",
                           last_name: "Bernardo",
@@ -19,6 +19,13 @@ RSpec.describe Api::V1::HouseholdsController, type: :controller do
                                     address: "123 Main St",
                                     monthly_rate: 3000,
                                     user: user2)
+      
+      
+      # params = {
+      #   email: @user.email,
+      #   password: "password"                
+      # }                              
+      post "api/v1/auth"                             
       get :index
 
       expect(assigns[:households]).to include(household1)
