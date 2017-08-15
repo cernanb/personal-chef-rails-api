@@ -4,6 +4,8 @@ class Household < ApplicationRecord
 
   belongs_to :user
   has_many :members
+  has_many :household_meals
+  has_many :meals, through: :household_meals
 
   def convert_to_client
     update(client?: true)
