@@ -3,7 +3,7 @@ class Api::V1::HouseholdsController < ApplicationController
 
   def index
     @households = current_user.households
-    render json: @households
+    render "households/index.json.jbuilder", households: @households
   end
 
   def show
