@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :households, only: [:index, :show, :create] do
-        resources :meals, only: [:index]
+        resources :meals, only: [:index] do
+          resources :household_meals, only: [:create]
+        end
+        # post '/:meal_id/meals', to: 'households#add_meal'
       end
       resources :users, only: [:create] 
       resources :meals, only: [:create, :index]
