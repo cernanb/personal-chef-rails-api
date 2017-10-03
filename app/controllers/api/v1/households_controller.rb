@@ -5,7 +5,7 @@ class Api::V1::HouseholdsController < ApplicationController
     @households = current_user.households
     render "households/index.json.jbuilder", households: @households
   end
-
+  
   def show
     household = Household.find(params[:id])
     
@@ -25,14 +25,15 @@ class Api::V1::HouseholdsController < ApplicationController
     end
     
     def convert
-      household = Household.find(params[:household_id])
-      household.convert_to_client
-      render json: household
+      @household = Household.find(params[:household_id])
+      @household.convert_to_client
+      render "households/show.json.jbuilder", household: @household
     end
     
     private
     def household_params
       params.require(:household).permit(:name, :monthly_rate, :address)
     end
-
-end
+    
+  end
+  
