@@ -11,3 +11,7 @@ u = User.create(first_name: "Cernan", last_name: "Bernardo", email: "cernanb@gma
 10.times do 
   Household.create(name: Faker::Name.last_name, address: Faker::Address.street_address, monthly_rate: Faker::Number.number(4), user_id: u.id)
 end
+
+20.times do
+  Meal.create(name: Faker::Food.ingredient)
+end
