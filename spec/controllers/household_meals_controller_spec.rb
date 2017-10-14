@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe HouseholdMealsController, type: :controller do
+# RSpec.describe HouseholdMealsController, type: :controller do
 
-end
+# end
