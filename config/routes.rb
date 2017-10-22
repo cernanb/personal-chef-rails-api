@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         # post '/:meal_id/meals', to: 'households#add_meal'
         post '/convert', to: 'households#convert'
       end
+      resources :members, only: [:index]
       resources :users, only: [:create]
       resources :meals, only: [:create, :index]
       post '/auth', to: 'auth#login'
