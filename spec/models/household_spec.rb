@@ -14,12 +14,20 @@ RSpec.describe Household, type: :model do
       it 'converts a household to a client' do
         household = create(:household)
 
-        household.convert_to_client
+        household.convert_to_client(1000)
         expect(household.client?).to eq(true)
       end
-      
+
+      it 'allows user to change the monthly rate for a converted lead' do
+        household = create(:household)
+
+        household.convert_to_client(1000)
+        expect(household.client?).to eq(true)
+        expect(household.monthly_rate).to eq(1000)
+      end
+
     end
-    
+
   end
 
   describe 'validations' do
@@ -34,8 +42,8 @@ RSpec.describe Household, type: :model do
 
       expect(household.valid?).to eq(false)
     end
-    
-    
+
+
   end
 
   describe 'relationships' do
@@ -55,8 +63,8 @@ RSpec.describe Household, type: :model do
 
       expect(household.members.size).to eq(2)
     end
-    
+
   end
-  
-  
+
+
 end
