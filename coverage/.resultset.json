@@ -258,10 +258,12 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -391,6 +393,39 @@
         0,
         null,
         null,
+        null
+      ],
+      "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/spec/controllers/members_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/app/controllers/api/v1/members_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
       ],
@@ -434,6 +469,14 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
         1,
         1,
         null,
@@ -492,7 +535,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null,
         null
@@ -1004,6 +1047,6 @@
         null
       ]
     },
-    "timestamp": 1507956664
+    "timestamp": 1508722063
   }
 }
