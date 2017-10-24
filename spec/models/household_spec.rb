@@ -64,6 +64,16 @@ RSpec.describe Household, type: :model do
       expect(household.members.size).to eq(2)
     end
 
+    it 'has many notes' do
+      user = create(:user)
+      household = build(:household, user: user)
+
+      note1 = create(:note, household: household)
+      note2 = create(:note, household: household)
+
+      expect(household.notes.size).to eq(2)
+    end
+
   end
 
 

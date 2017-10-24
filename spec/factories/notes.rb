@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :note do
-    content "MyString"
-    household nil
+    content "Called lead"
+    household
   end
 end
