@@ -232,6 +232,14 @@
         null,
         null
       ],
+      "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/spec/factories/notes.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/spec/factories/user_meals.rb": [
         1,
         1,
@@ -519,6 +527,16 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -529,6 +547,7 @@
         1,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -731,6 +750,35 @@
       "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/app/models/member.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/spec/models/note_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/cernanbernardo/Development/projects/personal_chef/personal_chef_api/app/models/note.rb": [
         1,
         1,
         1,
@@ -1047,6 +1095,6 @@
         null
       ]
     },
-    "timestamp": 1508722063
+    "timestamp": 1508825983
   }
 }

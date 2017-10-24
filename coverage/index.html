@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-22T18:27:43-07:00">2017-10-22T18:27:43-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-23T23:19:43-07:00">2017-10-23T23:19:43-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">90.05%</span></span>
+    (<span class="covered_percent"><span class="green">90.58%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>48</b> files in total.
-    <b>442</b> relevant lines. 
-    <span class="green"><b>398</b> lines covered</span> and
+    <b>51</b> files in total.
+    <b>467</b> relevant lines. 
+    <span class="green"><b>423</b> lines covered</span> and
     <span class="red"><b>44</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -123,9 +123,9 @@
       <tr>
         <td class="strong"><a href="#ff748ff5dd56e808c6b9c535ead014fa710076bd" class="src_link" title="app/models/household.rb">app/models/household.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>9</td>
-        <td>9</td>
+        <td>15</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.1</td>
       </tr>
@@ -176,6 +176,16 @@
         <td>6</td>
         <td>5</td>
         <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#be72da0c64be1eb81dc002f521883a7080136f15" class="src_link" title="app/models/note.rb">app/models/note.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -421,6 +431,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#22f71c35dc54a4c20e436693b6748239a327cec5" class="src_link" title="spec/factories/notes.rb">spec/factories/notes.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#0a9d7e0e6ba66980ffaedadb1920b230cbd95bee" class="src_link" title="spec/factories/user_meals.rb">spec/factories/user_meals.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>6</td>
@@ -453,9 +473,9 @@
       <tr>
         <td class="strong"><a href="#7058d1859e54c17de2559242bfb855361812b037" class="src_link" title="spec/models/household_spec.rb">spec/models/household_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>70</td>
-        <td>34</td>
-        <td>34</td>
+        <td>80</td>
+        <td>40</td>
+        <td>40</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -498,6 +518,16 @@
         <td>19</td>
         <td>0</td>
         <td>1.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#22b560c946279d70c2148bfc27611ea4a3ed38e7" class="src_link" title="spec/models/note_spec.rb">spec/models/note_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>21</td>
+        <td>11</td>
+        <td>11</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -1626,8 +1656,8 @@
     <h3>app/models/household.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1683,37 +1713,43 @@
           <code class="ruby">  has_many :meals, through: :household_meals</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :notes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">  def convert_to_client(rate)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
+        <li class="covered" data-hits="2" data-linenumber="12">
           <span class="hits">2</span>
           
           <code class="ruby">    update(client?: true, monthly_rate: rate)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -1989,6 +2025,49 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="be72da0c64be1eb81dc002f521883a7080136f15">
+  <div class="header">
+    <h3>app/models/note.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Note &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :household</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :content, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>
@@ -4189,6 +4268,61 @@
 </div>
 
       
+        <div class="source_table" id="22f71c35dc54a4c20e436693b6748239a327cec5">
+  <div class="header">
+    <h3>spec/factories/notes.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryGirl.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :note do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    content &quot;Called lead&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    household</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="0a9d7e0e6ba66980ffaedadb1920b230cbd95bee">
   <div class="header">
     <h3>spec/factories/user_meals.rb</h3>
@@ -4395,8 +4529,8 @@
     <h3>spec/models/household_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>40</b> relevant lines. 
+      <span class="green"><b>40</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4800,25 +4934,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;has many notes&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user = create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      household = build(:household, user: user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      note1 = create(:note, household: household)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      note2 = create(:note, household: household)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(household.notes.size).to eq(2)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">end</code>
@@ -5819,6 +6013,151 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="22b560c946279d70c2148bfc27611ea4a3ed38e7">
+  <div class="header">
+    <h3>spec/models/note_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Note, type: :model do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;validations&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;requires content&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      note = build(:note, content: nil)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(note.valid?).to eq(false)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;relationships&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;belongs to a household&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      household = create(:household)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      note = create(:note, household: household)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(note.household).to eq(household)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
