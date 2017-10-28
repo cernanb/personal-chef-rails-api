@@ -7,5 +7,6 @@ json.array! @households do |household|
   json.client household.client?
   json.notes household.notes do |note|
     json.content note.content
+    json.created_at note.created_at
   end
 end
