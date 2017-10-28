@@ -4,3 +4,7 @@ json.address @household.address
 json.monthly_rate @household.monthly_rate
 json.meal_ids @household.meal_ids
 json.client @household.client?
+json.notes @household.notes do |note|
+    json.content note.content
+    json.created_at note.created_at
+  end
