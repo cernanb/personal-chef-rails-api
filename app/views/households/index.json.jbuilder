@@ -6,6 +6,7 @@ json.array! @households do |household|
   json.meal_ids household.meal_ids
   json.client household.client?
   json.notes household.notes do |note|
+    json.id note.id
     json.content note.content
     json.created_at note.created_at
   end
