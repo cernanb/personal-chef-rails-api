@@ -1,10 +1,10 @@
 class Api::V1::NotesController < ApplicationController
   def create
     @household = Household.find(params[:household_id])
-    note = @household.notes.build(note_params)
+    @note = @household.notes.build(note_params)
     
-    if note.save
-      render "households/show.json.jbuilder", household: @household
+    if @note.save
+      render "notes/show.json.jbuilder", note: @note
     else
       render json: {
         errors: note.errors.full_messages
