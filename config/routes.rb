@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :households, only: [:index, :show, :create] do
         resources :members, only: [:create]
+        resources :engagements, only: [:create]
         resources :notes, only: [:create]
         resources :meals, only: [:index] do
           resources :household_meals, only: [:create]
