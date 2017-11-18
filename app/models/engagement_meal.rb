@@ -1,0 +1,2 @@
+class EngagementMeal < ApplicationRecord
+end
