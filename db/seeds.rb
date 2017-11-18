@@ -13,5 +13,5 @@ u = User.create(first_name: "Cernan", last_name: "Bernardo", email: "cernanb@gma
 end
 
 20.times do
-  Meal.create(name: Faker::Food.ingredient)
+  Meal.create(name: Faker::Food.ingredient, url: Faker::Internet.url)
 end
