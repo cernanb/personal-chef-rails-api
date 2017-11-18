@@ -6,4 +6,7 @@ class Meal < ApplicationRecord
 
   has_many :household_meals
   has_many :households, through: :household_meals
+
+  has_many :engagement_meals
+  has_many :meals, through: :engagement_meals
 end
