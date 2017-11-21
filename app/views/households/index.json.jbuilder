@@ -5,7 +5,16 @@ json.array! @households do |household|
   json.monthly_rate household.monthly_rate
   json.meal_ids household.meal_ids
   json.client household.client?
-  json.engagement household.next_engagement
+  if household.next_engagement
+    json.engagement do
+      json.date household.next_engagement.date
+      json.meal_ids household.next_engagement.meal_ids
+    end 
+  end
+  if household.next_engagement
+    
+    json.meal_ids household.next_engagement.meal_ids
+  end
   json.notes household.notes do |note|
     json.id note.id
     json.content note.content
