@@ -8,7 +8,6 @@ class Api::V1::EngagementsController < ApplicationController
       render json: {
         errors: engagement.errors.full_messages
         }, status: 500
-      end
     end
   end
 
