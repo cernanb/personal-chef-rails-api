@@ -1,6 +1,7 @@
 class Api::V1::EngagementsController < ApplicationController
   def create
-    engagment = Engagement.new(engagement_params)
+    household = Household.find(params[:household_id])
+    engagement = household.engagements.build(engagement_params)
 
     if engagement.save
       render json: engagement
