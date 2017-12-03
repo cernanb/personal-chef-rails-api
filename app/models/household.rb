@@ -14,7 +14,7 @@ class Household < ApplicationRecord
   end
 
   def next_engagement
-    self.engagements.where('date > ?', Date.today).first
+    self.engagements.where('date > ?', Date.today).order(date: :asc).first
   end
 
 end
