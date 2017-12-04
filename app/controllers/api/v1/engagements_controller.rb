@@ -4,7 +4,7 @@ class Api::V1::EngagementsController < ApplicationController
     engagement = household.engagements.build(engagement_params)
 
     if engagement.save
-      render json: engagement
+      render json: household.next_engagement
     else
       render json: {
         errors: engagement.errors.full_messages

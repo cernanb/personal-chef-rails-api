@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :members, only: [:index]
       resources :users, only: [:create]
       resources :meals, only: [:create, :index]
+      post '/engagements/:engagement_id/meals/:meal_id/engagement_meals', to: 'engagement_meals#create'
       post '/auth', to: 'auth#login'
       post '/auth/refresh', to: 'auth#refresh'
 
