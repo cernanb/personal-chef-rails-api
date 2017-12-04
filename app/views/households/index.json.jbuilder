@@ -7,6 +7,7 @@ json.array! @households do |household|
   json.client household.client?
   if household.next_engagement
     json.engagement do
+      json.id household.next_engagement.id
       json.date household.next_engagement.date
       json.meal_ids household.next_engagement.meal_ids
     end 
