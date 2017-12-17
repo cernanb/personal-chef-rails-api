@@ -20,7 +20,7 @@ class Api::V1::MealsController < ApplicationController
 
   private
     def meal_params
-      params.require(:meal).permit(:name)
+      params.require(:meal).permit(:name, :url)
     end
 
 end
