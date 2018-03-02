@@ -32,7 +32,7 @@ class Api::V1::HouseholdsController < ApplicationController
 
     private
     def household_params
-      params.require(:household).permit(:name, :monthly_rate, :address)
+      params.require(:household).permit(:name, :monthly_rate, :address, :client?)
     end
 
   end
