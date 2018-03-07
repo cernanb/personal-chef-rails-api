@@ -9,4 +9,6 @@ class Meal < ApplicationRecord
 
   has_many :engagement_meals
   has_many :meals, through: :engagement_meals
+
+  has_many :meal_notes
 end
