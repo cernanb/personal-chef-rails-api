@@ -15,7 +15,8 @@ class Api::V1::MealsController < ApplicationController
   def index
     @meals = Meal.all
 
-    render json: @meals
+    # render json: @meals
+    render "meals/index.json.jbuilder", meals: @meals
   end
 
   private
