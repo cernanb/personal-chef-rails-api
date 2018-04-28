@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :meal_ingredient do
     ingredient 
     meal 

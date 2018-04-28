@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :household do
     user
     name "Bernardo"
