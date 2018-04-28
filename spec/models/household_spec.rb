@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Household, type: :model do
 
-  it "has a default value of false for client?" do
+  it "has a default value of false for client" do
     household = build(:household)
 
-    expect(household.client?).to eq(false)
+    expect(household.client).to eq(false)
   end
 
   describe 'instance methods' do
@@ -15,14 +15,14 @@ RSpec.describe Household, type: :model do
         household = create(:household)
 
         household.convert_to_client(1000)
-        expect(household.client?).to eq(true)
+        expect(household.client).to eq(true)
       end
 
       it 'allows user to change the monthly rate for a converted lead' do
         household = create(:household)
 
         household.convert_to_client(1000)
-        expect(household.client?).to eq(true)
+        expect(household.client).to eq(true)
         expect(household.monthly_rate).to eq(1000)
       end
 

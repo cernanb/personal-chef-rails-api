@@ -14,11 +14,11 @@ class User < ApplicationRecord
   has_secure_password
 
   def leads
-    households.where(client?: false)
+    households.where(client: false)
   end
 
   def clients
-    households.where(client?: true)
+    households.where(client: true)
   end
   
 end

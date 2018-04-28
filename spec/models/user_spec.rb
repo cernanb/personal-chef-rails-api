@@ -53,7 +53,7 @@ RSpec.describe User, type: :model do
       user = build(:user)
 
       household1 = create(:household, user: user)
-      household2 = create(:household, user: user, client?: true)
+      household2 = create(:household, user: user, client: true)
 
       user.households << household1
       user.households << household2
@@ -65,7 +65,7 @@ RSpec.describe User, type: :model do
       user = build(:user)
 
       household1 = create(:household, user: user)
-      household2 = create(:household, user: user, client?: true)
+      household2 = create(:household, user: user, client: true)
 
       user.households << household1
       user.households << household2
