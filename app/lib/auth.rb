@@ -1,3 +1,5 @@
+require 'jwt'
+
 class Auth
 
   def self.create_token(user_id)
