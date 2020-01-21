@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :meal do
-    name "Chicken Soup"
+    name {"Chicken Soup"}
   end
 end
