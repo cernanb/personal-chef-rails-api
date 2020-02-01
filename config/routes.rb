@@ -25,6 +25,6 @@ Rails.application.routes.draw do
   end
 
   namespace :clients do
-    get '/send_survey', to: "mailer#send_survey"
+    get '/:id//send_survey', to: "mailer#send_survey"
   end
 end
