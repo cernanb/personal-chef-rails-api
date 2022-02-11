@@ -8,7 +8,7 @@ end
 
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
